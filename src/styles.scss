@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+@use "./assets/styles/_css-variables";
+
+:root{
+  --header-bar-heigh: clamp(40px, 4vw, 70px);
+}
+
+html,
+body {
+  overflow: hidden;
+  height: 100%;
+}
+
+body{
+  margin: 0;
+}
