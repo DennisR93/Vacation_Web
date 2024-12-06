@@ -11,8 +11,4 @@ import {NgComponentOutlet} from '@angular/common';
 export class VpWizardStepComponent {
   @Input() stepComponent!: any;
 
-  ngOnInit(): void {
-    console.log(this.stepComponent);
-  }
-
 }
