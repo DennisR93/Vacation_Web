@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 import {HeaderComponent} from '../../core/components/header/header.component';
 import {FooterComponent} from '../../core/components/footer/footer.component';
@@ -12,7 +12,7 @@ import {FooterComponent} from '../../core/components/footer/footer.component';
   ],
   templateUrl: './app-layout.component.html',
   styleUrl: './app-layout.component.scss',
-  standalone: true
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppLayoutComponent {
 
