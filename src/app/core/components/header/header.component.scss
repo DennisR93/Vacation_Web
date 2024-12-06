@@ -1,0 +1,41 @@
+:host{
+  --header-z-index: 199;
+}
+
+header{
+  position: relative;
+  padding: clamp(0.25rem, -0.25rem + 1.042vw, 1rem) 0;
+  min-height: var(--header-bar-height);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+  display: flex;
+  align-items: center;
+  z-index: var(--header-z-index);
+
+  &.no-shadow{
+    box-shadow: none;
+  }
+
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    padding: 0 1.25rem;
+    font-size: clamp(0.7rem, 0.25rem + 0.938vw, 1.375rem);
+    z-index: 99;
+    width: 100vw;
+
+    .nav{
+      display: flex;
+
+      .nav-list{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        list-style: none;
+        gap: 1.6vw;
+      }
+    }
+  }
+}
