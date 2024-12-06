@@ -1,1 +1,34 @@
-<p>vp-wizard works!</p>
+<div class="wizard">
+  <!-- Wizard Steps Navigation -->
+<!--  TODO - Refactor to stepper bar-->
+  <div class="wizard-header">
+    @for (step of steps; track $index) {
+      <div [class.active]="currentStep === $index" [class.completed]="$index < currentStep">
+        Step {{ $index + 1 }}: {{ step.title }}
+      </div>
+    }
+  </div>
+
+  <!-- Wizard Content -->
+  <div class="wizard-content">
+    @if (steps[currentStep]) {
+      <app-vp-wizard-step
+        [stepComponent]="steps[currentStep]?.component">
+      </app-vp-wizard-step>
+    }
+  </div>
+
+  <!-- Navigation Buttons -->
+<!--  TODO - Refactor to component-->
+  <div class="wizard-controls">
+    <button (click)="goBack()" [disabled]="currentStep === 0">Back</button>
+
+    @if (!isLastStep()) {
+      <button (click)="goNext()">Next</button>
+    }
+
+    @if (isLastStep()) {
+      <button (click)="finish()">Finish</button>
+    }
+  </div>
+</div>
