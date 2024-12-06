@@ -1,0 +1,39 @@
+.footer-container {
+  padding: 11.2vw 9.9vw 0;
+}
+
+footer {
+  .footer-main {
+    .footer-menu {
+      display: flex;
+      justify-content: space-between;
+      row-gap: 6vw;
+      flex-wrap: wrap;
+
+
+      .footer-menu-items {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        min-width: fit-content;
+
+
+        .menu-item {
+          padding-inline-end: clamp(1.25rem, -4.375rem + 11.719vw, 9.688rem);
+          min-width: clamp(7rem, 3.667rem + 6.944vw, 12rem);
+
+        }
+      }
+    }
+
+    .side-menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      flex-direction: column;
+      row-gap: 8.5vh;
+      column-gap: 8vw;
+
+    }
+  }
+}
