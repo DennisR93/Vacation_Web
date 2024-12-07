@@ -1,1 +1,29 @@
-<p>register-second-step works!</p>
+<div class="register-step">
+
+  <div class="form">
+    <form [formGroup]="formStep">
+
+      <label for="city">City</label>
+      <input type="text" id="city" formControlName="city">
+      <span>Error Box</span>
+
+      <label for="street">Street</label>
+      <input type="text" id="street" formControlName="street">
+      <span>Error Box</span>
+
+      <label for="houseNumber">House number</label>
+      <input type="text" id="houseNumber" formControlName="houseNumber">
+      <span>Error Box</span>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" formControlName="password">
+      <span>Error Box</span>
+
+      <label for="confirmPassword">Confirm Password</label>
+      <input type="password" id="confirmPassword" formControlName="confirmPassword">
+      <span>Error Box</span>
+
+    </form>
+  </div>
+
+</div>
