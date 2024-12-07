@@ -1,3 +1,29 @@
 <div class="register-step">
 
+  <div class="form">
+    <form [formGroup]="formStep">
+
+      <label for="id">Id</label>
+      <input type="text" id="id" formControlName="id">
+      <span>Error Box</span>
+
+      <label for="firstName">First name</label>
+      <input type="text" id="firstName" formControlName="firstName">
+      <span>Error Box</span>
+
+      <label for="lastName">Last name</label>
+      <input type="text" id="lastName" formControlName="lastName">
+      <span>Error Box</span>
+
+      <label for="mobileNumber">Mobile number</label>
+      <input type="text" id="mobileNumber" formControlName="mobileNumber">
+      <span>Error Box</span>
+
+      <label for="email">Email</label>
+      <input type="text" id="email" formControlName="email">
+      <span>Error Box</span>
+
+    </form>
+  </div>
+
 </div>
