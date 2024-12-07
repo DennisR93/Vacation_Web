@@ -2,6 +2,7 @@ import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 import {RegisterComponent} from '../../../pages/register/register.component';
 import {HomeComponent} from '../../../pages/home/home.component';
 import {VpWizardStepComponent} from './vp-wizard-step/vp-wizard-step.component';
+import {FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-vp-wizard',
@@ -13,6 +14,7 @@ import {VpWizardStepComponent} from './vp-wizard-step/vp-wizard-step.component';
 export class VpWizardComponent {
   @Input() steps:any[] = [];
   @Input() wizardTitle!: string;
+  @Input() form?: FormGroup;
 
   protected currentStep:number = 0;
 
