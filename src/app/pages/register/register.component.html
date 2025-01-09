@@ -1,1 +1,18 @@
-<app-vp-wizard [steps]="registrationSteps" [form]="registrationForm"></app-vp-wizard>
+<!--<app-wizard>-->
+<!--  <app-wizard-step>-->
+<!--    <app-register-first-step [formStep]="firstStepFormGroup"/>-->
+<!--  </app-wizard-step>-->
+
+<!--  <app-wizard-step>-->
+<!--    <app-register-second-step [formStep]="secondStepFormGroup"/>-->
+<!--  </app-wizard-step>-->
+<!--</app-wizard>-->
+
+<!--<div class="registration-container">-->
+<!--  @if (currentStep === 1){-->
+<!--    <app-register-first-step [formStep]="firstStepFormGroup"/>-->
+<!--  }-->
+<!--</div>-->
+
+<app-vp-wizard [steps]="steps" [containerTitle]="'Wizard'"></app-vp-wizard>
+
