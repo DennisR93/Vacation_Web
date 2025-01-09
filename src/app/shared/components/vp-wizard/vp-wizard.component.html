@@ -2,7 +2,8 @@
   <!-- Wizard Steps Navigation -->
 <!--  TODO - Refactor to stepper bar-->
   <div class="wizard-header">
-    @for (step of steps; track $index) {
+    {{containerTitle()}}
+    @for (step of steps(); track $index) {
       <div [class.active]="currentStep === $index" [class.completed]="$index < currentStep">
         Step {{ $index + 1 }}: {{ step.title }}
       </div>
@@ -11,24 +12,31 @@
 
   <!-- Wizard Content -->
   <div class="wizard-content">
-    @if (steps[currentStep]) {
+    @if (steps()[currentStep]) {
       <app-vp-wizard-step
-        [stepComponent]="steps[currentStep]?.component">
+        [component]="steps()[currentStep]?.component"
+        [data]="steps()[currentStep]?.data"
+        >
       </app-vp-wizard-step>
     }
   </div>
 
   <!-- Navigation Buttons -->
-<!--  TODO - Refactor to component-->
+<!--&lt;!&ndash;  TODO - Refactor to component&ndash;&gt;-->
+<!--  <div class="wizard-controls">-->
+<!--    <button (click)="goBack()" [disabled]="currentStep === 0">Back</button>-->
+
+<!--    @if (!isLastStep()) {-->
+<!--      <button (click)="goNext()">Next</button>-->
+<!--    }-->
+
+<!--    @if (isLastStep()) {-->
+<!--      <button (click)="finish()">Finish</button>-->
+<!--    }-->
+<!--  </div>-->
+
   <div class="wizard-controls">
     <button (click)="goBack()" [disabled]="currentStep === 0">Back</button>
-
-    @if (!isLastStep()) {
-      <button (click)="goNext()">Next</button>
-    }
-
-    @if (isLastStep()) {
-      <button (click)="finish()">Finish</button>
-    }
+    <button (click)="goNext()" [disabled]="currentStep === steps().length - 1">Next</button>
   </div>
 </div>
