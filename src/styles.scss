@@ -1,4 +1,5 @@
 @use "./assets/styles/_css-variables";
+@use "./assets/styles/_a11y_styles";
 
 :root{
   --header-bar-heigh: clamp(40px, 4vw, 70px);
@@ -12,4 +13,8 @@ body {
 
 body{
   margin: 0;
+}
+
+.sr-only {
+  @include perceived-by-screen-reader-only;
 }
