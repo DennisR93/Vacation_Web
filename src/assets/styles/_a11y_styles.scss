@@ -1,0 +1,26 @@
+@function if-important($important){
+  @return #{if($important, '!important', '')};
+}
+
+@mixin focus-marker-visible {
+  border-color: transparent !important;
+  box-shadow: white 0px 0px 0px 5px !important;
+  outline-offset: 1px;
+  outline: 3px dashed black;
+
+  @content;
+}
+
+@mixin perceived-by-screen-reader-only($important: false) {
+  /* "visible" to screen reader only */
+  position: absolute if-important($important);
+  width: 1px if-important($important);
+  height: 1px if-important($important);
+  padding: 0 if-important($important);
+  margin: -1px if-important($important);
+  overflow: hidden if-important($important);
+  clip: rect(0, 0, 0, 0) if-important($important);
+  border: 0 if-important($important);
+
+  @content;
+}
