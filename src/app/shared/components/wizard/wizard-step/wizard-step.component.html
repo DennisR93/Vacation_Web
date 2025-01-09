@@ -1,0 +1,14 @@
+@if(isActive){
+  <div
+    class="wizard-step"
+    role="tabpanel"
+    [attr.aria-labelledby]="'step-' + index + '-header'"
+    [attr.aria-hidden]="!isActive"
+    [tabindex]="isActive ? 0 : -1"
+    [attr.aria-live]="isActive ? 'polite' : null"
+  >
+    <ng-content></ng-content>
+  </div>
+}
+
+
