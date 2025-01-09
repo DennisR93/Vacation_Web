@@ -1,0 +1,10 @@
+<div class="wizard-container" role="tablist">
+  <ng-content></ng-content>
+</div>
+@if(steps){
+  <div class="wizard-controls">
+    <button (click)="goBack()" [disabled]="currentStepIndex === 0">Back</button>
+    <button (click)="goNext()" [disabled]="currentStepIndex === steps.length - 1">Next</button>
+  </div>
+}
+
