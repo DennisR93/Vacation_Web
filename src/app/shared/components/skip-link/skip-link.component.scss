@@ -1,0 +1,29 @@
+:host {
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+}
+
+.skipping-link {
+  .skip-link {
+    position: absolute;
+    top: -80px;
+    width: 110px;
+    margin-inline-start: 20px;
+    color: black;
+    font-size: 1rem;
+    padding: .8em 1.25em .375em;
+    background-color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: .6em;
+    box-shadow: 0 2px 8px 0 rgba(36,76,168,.12);
+    transition: transform .25s ease-out;
+
+    &:focus {
+      transform: translateY(70px);
+      border: 1px dashed #fff;
+      outline: 2px solid #000;
+    }
+  }
+}
