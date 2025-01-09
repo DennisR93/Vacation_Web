@@ -3,5 +3,6 @@ export const patterns = {
   names: '^[a-zA-Z.\\-\"\']+$',
   phoneNumber:'^\\d{7}',
   houseNumber:'\\d{1,3}',
-  caseStatus: '^\\d{6}-\\d{1,15}$'
+  id: '\\d{9}',
+  englishCharacters: '^[a-zA-Z.\\-\"\']+$'
 }
