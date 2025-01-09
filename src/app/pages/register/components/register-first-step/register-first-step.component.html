@@ -1,29 +1,37 @@
-<div class="register-step">
+  <div class="form-container">
+    <form [formGroup]="formStep" class="form">
 
-  <div class="form">
-    <form [formGroup]="formStep">
+      <div class="form-group-item">
+        <label for="id" class="form-item">Id</label>
+        <input type="text" id="id" [formControlName]="formConst.controls.id">
+        @if (formStep.get('id')?.invalid && (formStep.get('id')?.touched || formStep.get('id')?.dirty)) {
+          <span class="form-item">Error Box</span>
+        }
+      </div>
 
-      <label for="id">Id</label>
-      <input type="text" id="id" formControlName="id">
-      <span>Error Box</span>
+      <div class="form-group-item">
+        <label for="firstName">First name</label>
+        <input type="text" id="firstName" formControlName="firstName">
+        <span>Error Box</span>
+      </div>
 
-      <label for="firstName">First name</label>
-      <input type="text" id="firstName" formControlName="firstName">
-      <span>Error Box</span>
+      <div class="form-group-item">
+        <label for="lastName">Last name</label>
+        <input type="text" id="lastName" formControlName="lastName">
+        <span>Error Box</span>
+      </div>
 
-      <label for="lastName">Last name</label>
-      <input type="text" id="lastName" formControlName="lastName">
-      <span>Error Box</span>
+      <div class="form-group-item">
+        <label for="mobileNumber">Mobile number</label>
+        <input type="text" id="mobileNumber" formControlName="mobileNumber">
+        <span>Error Box</span>
+      </div>
 
-      <label for="mobileNumber">Mobile number</label>
-      <input type="text" id="mobileNumber" formControlName="mobileNumber">
-      <span>Error Box</span>
-
-      <label for="email">Email</label>
-      <input type="text" id="email" formControlName="email">
-      <span>Error Box</span>
+      <div class="form-group-item">
+        <label for="email">Email</label>
+        <input type="text" id="email" formControlName="email">
+        <span>Error Box</span>
+      </div>
 
     </form>
   </div>
-
-</div>
